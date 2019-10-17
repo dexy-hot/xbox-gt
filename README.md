@@ -3,7 +3,7 @@
 <b>Installation</b>
 
 You just need python3 to run this (and some python libraries).
-Or you can use the compiled version for windows (dist folder)
+<br>Or you can use the compiled version for windows (dist folder)
 
 <b>Getting started</b>
 
