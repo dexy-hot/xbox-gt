@@ -132,8 +132,9 @@ def intro():
 
 
 ############# This functions is called peridocally to check username.
-### At Reserve url
 def CheckUsername(name,q):
+	if (not len(proxies) > 5) and prl:
+		time.sleep(6); #Rate limit, one request every 6 seconds
 	change = {"gamertag":name,"reservationId":"" + od + "","targetGamertagFields":"gamertag"}
 	d = session.post("https://gamertag.xboxlive.com/gamertags/reserve", json=change,headers=headers,verify=False)  ### THIS HERE CHECKS THE USERNAME 
 
@@ -173,7 +174,7 @@ def CheckUsername(name,q):
 	if fini == False:
 		CheckUsername(name,q)
 
-### This Here Changes the username
+############# This Here Changes the username
 def ChangeUsername(name):
 	headers["x-xbl-contract-version"] = '6'
 	chdata = {"reservationId":od,"gamertag":{"gamertag":name,"gamertagSuffix":"","classicGamertag":name},"preview":False,"useLegacyEntitlement":False}
@@ -200,7 +201,11 @@ except:
 	
 Login()
 name = input("Name to Turbo: ")
-
+rlimit = input("Prevent Rate Limit (Will decrease speed) Y/N: ")
+if rlimit == "y":
+	prl = True;
+else:
+	prl = False
 #####Multiple Threads Here if you have proxies set up
 if len(proxies) > 5:
 	try:
@@ -224,6 +229,3 @@ except KeyboardInterrupt:
 		pass
 		fini = True
 		spinner.stop()
-
-
-
