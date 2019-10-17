@@ -1,5 +1,11 @@
 <h1>Xbox Gamertag Autoclaimer</h1>
 
+<b>Installation</b>
+
+You just need python3 to run this (and some python libraries).
+
+<b>Getting started</b>
+
 You need HQ Https Proxies if you want to use multi-threading,
 
 Configure the settings.json file with your xbox credentials.
