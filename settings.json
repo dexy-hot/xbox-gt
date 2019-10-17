@@ -1,5 +1,5 @@
 {
-"email" : "kacefey@mailnow2.com",
-"password": "Possesive",
-"proxy" : "proxy.txt" 
+"email" : "ACCOUNT_EMAIL",
+"password": "ACCOUNT_PASSWORD",
+"proxy" : "proxy.txt" //Set to false for no proxies
 }
