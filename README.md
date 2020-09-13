@@ -1,5 +1,5 @@
-<h1>Xbox Gamertag Autoclaimer</h1>
-
+<h1>Xbox Gamertag Autoclaimer </h1>
+<h2>[Not maintained anymore, probably not working as excepted.]</h2>
 <b>Installation</b>
 
 You just need python3 to run this (and some python libraries).
